@@ -1,0 +1,32 @@
+
+
+
+.progress-bar.progress-bar-striped.active{
+  animation: progress-animation 5.6s infinite;
+  background-color: #8C92AC
+}
+
+.carousel-control-next-icon{
+display: none;
+
+}
+.carousel a{
+  width:10px;
+  height:10px
+}
+
+.carousel-control-prev-icon{
+  display: none;
+  
+  }
+
+
+@keyframes progress-animation{
+  0% {
+    width: 0;
+  }
+  100%{
+    width: 100%;
+  }
+}
+

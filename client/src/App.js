@@ -1,0 +1,108 @@
+import {Route,Switch} from 'react-router-dom'
+import './App.css';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import "./components/FontAwesome"
+import Excursion from './screens/Excursion';
+import Home from './screens/Home';
+import Hotel from './screens/Hotel';
+import Nav from './screens/Nav';
+import ParadiseScreen from './screens/ParadiseScreen';
+import Spa from './screens/Spa';
+import Suites from './screens/Suites';
+import {useState,useEffect} from 'react'
+import Basket from './components/Basket'
+import Review from './screens/Review';
+import MakingReview from './screens/MakingReview';
+
+function App() {
+  const [cartItems, setCartItems] = useState([]);
+  
+ //add for cart
+ //when using the onAdd make sure my IDS for my apis are all different and not the SAME!! otherwise they wont add to cart properly//
+ const onAdd = (val) => {
+  const exist = cartItems.find((x) => x.id == val.id);
+  if (exist) {
+    setCartItems(cartItems.map((x) => x.id == val.id ? { ...exist, QTY: exist.QTY + 1 } : x));
+  }
+  else {
+    setCartItems([...cartItems, { ...val, QTY: 1 }])
+  }
+  
+}
+//remove for cart
+const onRemove = (val) => {
+  const exist = cartItems.find((x) => x.id === val.id);
+  if (exist.QTY === 1) {
+    setCartItems(cartItems.filter((x) => x.id !== val.id));
+  }
+  else {
+    setCartItems(cartItems.map((x) => x.id === val.id ? { ...exist, QTY: exist.QTY - 1 } : x))
+
+  }
+}   
+  ////////LOCAL STORAGE STORING BELOW!! Do it the way below for carts///////
+  
+  
+//  //setting local storage//
+ const saveItems = () => {
+  localStorage.setItem("mycart", JSON.stringify(cartItems))
+};
+
+// local storage getting//
+
+const getItems = () => {
+  if (localStorage.getItem("mycart") === null) {
+    localStorage.setItem("mycart", JSON.stringify([]));
+  }
+  else {
+    let getItem = JSON.parse(localStorage.getItem("mycart")
+    );
+    setCartItems(getItem);
+  }
+};
+//  // BELOW MUST BE DONE THIS WAY AND IN App.js for this to work and save to local storage!
+useEffect(() => {
+  getItems();
+},[setCartItems])
+
+useEffect(() => {
+  saveItems();
+})
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  return (
+    <div >
+      <Nav  countCartItems={cartItems.length} />
+      <div className="pagecontainer">
+        <Route exact path="/MyCartLoggedIn"><Basket onAdd={onAdd} cartItems={cartItems} setCartItems={setCartItems} onRemove={onRemove} /></Route>
+        <Route exact path="/locations/:location_id/hotels/:hotel_id/MakeReview"> <MakingReview/></Route>
+        <Route exact path='/locations/:location_id/hotels/:hotel_id/Reviews'><Review/></Route>
+      <Route exact path='/locations/:location_id/hotels/:hotel_id/Spa'><Spa/></Route>
+      <Route exact path='/locations/:location_id/hotels/:hotel_id/Suites'><Suites/> </Route>
+
+      <Route exact path='/locations/:location_id/hotels/:hotel_id/NightLife'><h1>Night Life</h1> </Route>
+        <Route exact path='/locations/:location_id/hotels/:hotel_id/excursions'><Excursion onAdd={onAdd}/> </Route>
+      <Route exact path='/locations/:location_id/hotels'> <Hotel  onAdd={onAdd} /></Route>
+        <Route exact path='/locations'> <ParadiseScreen  onAdd={onAdd} /></Route>
+        <Route  exact path="/">  <Home/></Route>
+      </div>
+    </div>
+  );
+}
+
+export default App;
