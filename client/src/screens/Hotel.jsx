@@ -64,28 +64,28 @@ const filterHotels = hotel.filter((val) => {
           />
           <Link to={`/locations/${location_id}/hotels/${val.id}/Reviews`}>
             <button>
-            <FontAwesomeIcon icon="star"/>
+            <FontAwesomeIcon style={{marginRight:'3px'}} icon="star"/>
               Reviews
               </button></Link>
-          <button style={{ borderRadius: '10px', background: 'white', width: '160px', height: '160px', margin: '10px' }}> <Link style={{ textAlign: 'center', display: 'flex',justifyContent:'space-around' }} to={`/locations/${location_id}/hotels/${val.id}/excursions`}>
-          <FontAwesomeIcon icon="info-circle"/>
+          <button style={{ borderRadius: '10px', background: 'white', width: '160px', height: '160px', margin: '10px' }}> <Link style={{ textAlign: 'center' }} to={`/locations/${location_id}/hotels/${val.id}/excursions`}>
+          <FontAwesomeIcon  style={{marginRight:'8px'}} icon="info-circle"/>
 
             Excursions
             </Link> </button>
-          <button style={{ margin: '10px', borderRadius: '10px', background: 'white', width: '160px', height: '160px' }}> <Link style={{ textAlign: 'center', display: 'flex',justifyContent:'space-between' }} to={`/locations/${location_id}/hotels/${val.id}/Suites`}>
-          <FontAwesomeIcon icon="hotel"/>
+          <button style={{ margin: '10px', borderRadius: '10px', background: 'white', width: '160px', height: '160px' }}> <Link style={{ textAlign: 'center' }} to={`/locations/${location_id}/hotels/${val.id}/Suites`}>
+          <FontAwesomeIcon style={{marginRight:'8px'}} icon="hotel"/>
 
             Suites
             </Link> </button>
           
-            <button style={{ margin: '10px', borderRadius: '10px', background: 'white', width: '160px', height: '160px' }}> <Link style={{ justifyContent:'space-around',textAlign: 'center', display: 'flex' }} to={`/locations/${location_id}/hotels/${val.id}/NightLife`}>
-            <FontAwesomeIcon icon="ticket-alt"/>
+            <button style={{ margin: '10px', borderRadius: '10px', background: 'white', width: '160px', height: '160px' }}> <Link style={{textAlign: 'center'}} to={`/locations/${location_id}/hotels/${val.id}/NightLife`}>
+            <FontAwesomeIcon  icon="ticket-alt"/>
 
             Entertainment
             </Link> </button>
           
-            <button style={{ margin: '10px', borderRadius: '10px', background: 'white', width: '160px', height: '160px' }}> <Link style={{ textAlign: 'center', display: 'flex' }} to={`/locations/${location_id}/hotels/${val.id}/Spa`}>
-            <FontAwesomeIcon icon="spa"/>
+            <button style={{ margin: '10px', borderRadius: '10px', background: 'white', width: '160px', height: '160px' }}> <Link style={{ textAlign: 'center' }} to={`/locations/${location_id}/hotels/${val.id}/Spa`}>
+            <FontAwesomeIcon style={{marginRight:'10px'}} icon="spa"/>
 
             Spa
             </Link> </button>

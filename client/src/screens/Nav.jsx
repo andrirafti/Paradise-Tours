@@ -39,15 +39,15 @@ const Nav = (props) => {
       )}
        
 </button>      
-      <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`} ><Link onClick={() => closeMenu()} style={{ color: 'black', marginTop: '30px', marginLeft: '20px' }} to="/">
+      <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`} ><Link onClick={() => closeMenu()} style={{ color: 'black', marginTop: '70px', marginLeft: '20px' }} to="/">
         <FontAwesomeIcon style={{marginRight:'5px'}} icon="home"/>
         Home
         </Link>
-        <Link onClick={() => closeMenu()} style={{ color: 'black', marginTop: '20px', marginLeft: '20px', paddingRight: '0px' }} to="/locations">
+        <Link onClick={() => closeMenu()} style={{ color: 'black', marginTop: '20px', marginLeft: '20px',marginTop: '30px', paddingRight: '0px' }} to="/locations">
           <FontAwesomeIcon style={{marginRight:'5px'}} icon="globe-europe" />
           Paradise Destinations
            </Link>
-        <Link onClick={() => closeMenu()} style={{ color: 'black', marginTop: '20px', marginLeft: '20px', paddingRight: '0px' }} to="/locations"> VIP Locations *ON SALE*</Link>
+        {/* <Link onClick={() => closeMenu()} style={{ color: 'black', marginTop: '20px', marginLeft: '30px', paddingRight: '0px' }} to="/locations"> VIP Locations *ON SALE*</Link> */}
 
 
         
@@ -55,7 +55,7 @@ const Nav = (props) => {
 
 
 
-        <Link onClick={() => closeMenu()} style={{ color: 'black', marginTop: '20px', marginLeft: '20px', paddingRight: '0px' }} to='/MyCartLoggedIn'>
+        <Link onClick={() => closeMenu()} style={{ color: 'black', marginTop: '30px', marginLeft: '20px', paddingRight: '0px' }} to='/MyCartLoggedIn'>
           <FontAwesomeIcon style={{marginRight:'5px'}}icon="shopping-cart"/>
           Cart{countCartItems ? (
             <button style={{fontSize:'10px',backgroundColor:'red',width:'30px',height:'25px',marginTop:'10px'}} className="badge"><FontAwesomeIcon icon="shopping-cart"/>{countCartItems}</button>

@@ -1,14 +1,10 @@
 
 
 
-.progress-bar.progress-bar-striped.active{
-  animation: progress-animation 5.6s infinite;
-  background-color: #8C92AC
-}
 
 .carousel-control-next-icon{
-display: none;
-
+  display: none;
+  
 }
 .carousel a{
   width:10px;
@@ -18,8 +14,12 @@ display: none;
 .carousel-control-prev-icon{
   display: none;
   
-  }
+}
 
+.progress-bar.progress-bar-striped.active{
+  animation: progress-animation 5.6s infinite;
+  background-color: #8C92AC
+}
 
 @keyframes progress-animation{
   0% {
