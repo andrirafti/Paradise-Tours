@@ -147,7 +147,7 @@ Loading  </div>
       <hr></hr>
       <header>
         
-        <button style={{ backgroundColor: 'white'}}onClick={handleToggle}>
+        <button className="headerBTN" style={{ backgroundColor: 'white'}}onClick={handleToggle}>
           {navbarOpen ? (
            
     <MdClose  className="close" style={{color: "black", width: "30px", height: "30px" }} />
