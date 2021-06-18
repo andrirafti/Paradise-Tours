@@ -62,15 +62,15 @@ const MakingReview=()=>{
           {/* <p>The Below is For STAR RATINGS check the index CSS also!</p> */}
             <div className="rate">
 <input  onChange={handleChange} type="radio" id="star5" name="reviewrating" value="5" />
-   <label for="star5" title="text">5 stars</label>
+   <label className="stars"  for="star5" title="text">5 stars</label>
     <input onChange={handleChange} type="radio" id="star4" name="reviewrating" value="4" />
-    <label for="star4" title="text">4 stars</label>
+    <label className="stars"  for="star4" title="text">4 stars</label>
     <input onChange={handleChange} type="radio" id="star3" name="reviewrating" value="3" />
-    <label for="star3" title="text">3 stars</label>
+    <label className="stars"  for="star3" title="text">3 stars</label>
     <input onChange={handleChange} type="radio" id="star2" name="reviewrating" value="2" />
-    <label for="star2" title="text">2 stars</label>
+    <label className="stars"  for="star2" title="text">2 stars</label>
     <input onChange={handleChange} type="radio" id="star1" name="reviewrating" value="1" />
-    <label for="star1" title="text">1 star</label>
+    <label className="stars"  for="star1" title="text">1 star</label>
 
 </div>
 
@@ -81,10 +81,11 @@ const MakingReview=()=>{
         </div>
           
         <button style={{
-          "display": "block",
-          "margin-left": "auto",
+          
+          "margin-left": "40px",
           "margin-right": "auto",
-          "marginTop": "15px"
+          "marginTop": "15px",
+          "fontSize": "10px"
         }} type="submit">Submit Review</button>
       </form>
 
