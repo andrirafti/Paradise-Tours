@@ -34,7 +34,7 @@ const MakeReview=()=>{
       setCreated(reviewadded);
     };
     if (isCreated){
-      history.push(`/locations/${location_id}/hotels/${hotel_id}/Suites`)
+      history.push(`/locations/${location_id}/hotels/${hotel_id}/Suites/${suite_id}/Reviews`)
     }
   
   return (

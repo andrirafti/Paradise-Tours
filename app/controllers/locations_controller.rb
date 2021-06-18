@@ -11,7 +11,7 @@ class LocationsController < ApplicationController
   # use include to INCLUDE stuff into the postman... 
   #since i did include hotels inside postman we will see the HOTEL for each specefic ID
   def show
-    render json:@location, include: :hotels, status: :ok
+    render json:@location, status: :ok
 
   end
   

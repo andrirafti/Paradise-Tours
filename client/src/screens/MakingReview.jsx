@@ -33,7 +33,7 @@ const MakingReview=()=>{
       setCreated(reviewadded);
     };
     if (isCreated){
-      history.push(`/locations/${location_id}/hotels/`)
+      history.push(`/locations/${location_id}/hotels`)
     }
   
   return (
