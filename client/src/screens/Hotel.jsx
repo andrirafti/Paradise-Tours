@@ -117,13 +117,13 @@ Loading  </div>
 <p>Located just 30 minutes from the international airport, Paradise Resorts are among the Carribeans/Balkans finest All Inclusive resorts. An adults only haven offering world-class accommodations, gourmet dining, and gorgeous surroundings, Paradise Resorts is an escape where the best of romance and hospitality seamlessly combine.</p>
       </div>
       <hr></hr>
-      <header>
-        <button style={{backgroundColor:'white',marginBottom:'10px'}}onClick={handleToggle}>
+      <p>
+        <button className="headerBTN" style={{backgroundColor:'white',marginBottom:'10px'}}onClick={handleToggle}>
   {navbarOpen ? (
     <MdClose  className="close" style={{ color: "black", width: "30px", height: "30px" }} />
           ) : (
-              
-      <FontAwesomeIcon style={{ color: 'black', marginTop: '20px', marginLeft: '20px', paddingRight: '0px', marginRight: '20px' }} icon="search" />
+              <p>Sort:
+      <FontAwesomeIcon style={{ color: 'black', marginTop: '20px', marginLeft: '20px', paddingRight: '0px', marginRight: '20px' }} icon="search" /></p>
       )}
        
 </button>      
@@ -146,7 +146,7 @@ Loading  </div>
 
 
 
-</header>
+</p>
 
 
 
