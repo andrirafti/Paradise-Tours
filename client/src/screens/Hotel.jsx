@@ -187,6 +187,7 @@ Loading  </div>
             <FontAwesomeIcon style={{marginRight:'10px'}} icon="spa"/>
 
             Luxury Spa
+            
             </Link> </button>
 </div>
           <hr></hr>
