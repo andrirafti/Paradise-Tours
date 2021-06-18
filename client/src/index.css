@@ -134,6 +134,13 @@ button .ReviewC{
   width: 50%;
 }
 
+
+.INPUTS{
+  margin-right:0px;
+  margin-left: 30%;
+  display:block;
+  margin-top:20px
+}
 @media all
     and (max-width: 475px) 
     and (min-width: 350px)
@@ -215,7 +222,7 @@ and (device-width:375px){
 }
 
 /* media for submiting reviews*/
-@media only screen 
+ @media only screen 
     and (device-width: 375px) 
 {
   .block{
@@ -229,7 +236,7 @@ and (device-width:375px){
   margin-right: auto;
 }
 
-}
+} 
 
 
 /* Below is for the star rating */
