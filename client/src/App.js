@@ -83,12 +83,12 @@ function App() {
     saveItems();
   })
   
-  if (!isLoaded){
-    return <h1  className="loader" style={{position:'fixed',top:'40%',left:'45%'}}>Loading.. Please Wait</h1>
-  }
+  //Above is local storage//
   
-   //Above is local storage//
-
+  //loader below//
+  if (!isLoaded){
+    return <h1  className="loader" style={{position:'fixed',top:'40%',left:'45%'}}></h1>
+  }
   return (
 
    isLoaded&&(
