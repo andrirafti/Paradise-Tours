@@ -145,7 +145,7 @@ Loading  </div>
         </p>
      
       <hr></hr>
-      <header>
+      <p>
         
         <button className="headerBTN" style={{ backgroundColor: 'white'}}onClick={handleToggle}>
           {navbarOpen ? (
@@ -155,7 +155,7 @@ Loading  </div>
           )
   }
        
-</button>      
+</p>      
         <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`} >
           {/* <button  onClick={closeMenu} style={{ marginTop: '70px' }}>Close</button> */}
           <MdClose className="close" onClick={closeMenu} style={{ marginTop: '100px', fontSize: '30px', cursor: 'pointer' }} />
