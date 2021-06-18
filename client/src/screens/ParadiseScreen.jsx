@@ -145,7 +145,7 @@ Loading  </div>
         </p>
      
       <hr></hr>
-      <p>
+      <header>
         
         <button className="headerBTN" style={{ backgroundColor: 'white'}}onClick={handleToggle}>
           {navbarOpen ? (
@@ -182,7 +182,7 @@ Loading  </div>
 
 
 
-      </p>
+      </header>
 
 
 
