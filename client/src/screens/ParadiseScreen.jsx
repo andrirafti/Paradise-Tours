@@ -155,7 +155,7 @@ Loading  </div>
           )
   }
        
-</p>      
+</button>      
         <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`} >
           {/* <button  onClick={closeMenu} style={{ marginTop: '70px' }}>Close</button> */}
           <MdClose className="close" onClick={closeMenu} style={{ marginTop: '100px', fontSize: '30px', cursor: 'pointer' }} />
@@ -182,7 +182,7 @@ Loading  </div>
 
 
 
-      </header>
+      </p>
 
 
 
