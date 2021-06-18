@@ -1,18 +1,18 @@
-import {postReview} from "../services/ratings"
+import {postEntertainmentReview} from "../services/reviewEntertainment"
 import {useState} from 'react'
 import {useHistory,useParams} from 'react-router-dom'
 import "../components/FontAwesome"
 
-//Hotel REVIEW MAKER//
 
-const MakingReview=()=>{
+//Entertainment Review creator// 
+const MakeEntertainmentReview=()=>{
   const [isCreated, setCreated] = useState(false);
-  const {location_id,hotel_id}=useParams();
+  const {location_id,hotel_id,entertainment_id}=useParams();
   const history=useHistory();
   //the below is an easier way to do const [name,setName] const [goal,setGoal] make all useState into one big one
   const [reviews,setReview]=useState({
     name:"",
-    reviewrating: "",
+    rating: "",
     review: ""
   })
   //handleChange for the above// its the shorter way of doing const [name,setName]=useState([]) do all at once instead of indivually 
@@ -26,14 +26,15 @@ const MakingReview=()=>{
       [name]:value
     })
   }
+  
   // Now we need our handleSubmit which brings in the axios call to submit everyting properly from the handleChange input fields//
     const handleSubmit=async(e)=>{
       e.preventDefault();
-      const reviewadded = await postReview(location_id,hotel_id,reviews);
+      const reviewadded = await postEntertainmentReview(location_id,hotel_id,entertainment_id,reviews);
       setCreated(reviewadded);
     };
     if (isCreated){
-      history.push(`/locations/${location_id}/hotels/`)
+      history.push(`/locations/${location_id}/hotels/${hotel_id}/entertainment`)
     }
   
   return (
@@ -42,8 +43,8 @@ const MakingReview=()=>{
       <form onSubmit={handleSubmit}>
           
    
-        <h1 style={{ "textAlign": "center" }}>Like Our Product?
-          Leave Us A Review!</h1>
+        <h1 style={{ "textAlign": "center" }}>Like our Resorts Entertainment?
+          Leave us a review!</h1>
         <hr></hr>
         <div  className="reviews"style={{ "textAlign": "center" }}>
           <aside>
@@ -61,15 +62,15 @@ const MakingReview=()=>{
 
           {/* <p>The Below is For STAR RATINGS check the index CSS also!</p> */}
             <div className="rate">
-<input  onChange={handleChange} type="radio" id="star5" name="reviewrating" value="5" />
+<input  required onChange={handleChange} type="radio" id="star5" name="rating" value="5" />
    <label for="star5" title="text">5 stars</label>
-    <input onChange={handleChange} type="radio" id="star4" name="reviewrating" value="4" />
+    <input  required onChange={handleChange} type="radio" id="star4" name="rating" value="4" />
     <label for="star4" title="text">4 stars</label>
-    <input onChange={handleChange} type="radio" id="star3" name="reviewrating" value="3" />
+    <input required onChange={handleChange} type="radio" id="star3" name="rating" value="3" />
     <label for="star3" title="text">3 stars</label>
-    <input onChange={handleChange} type="radio" id="star2" name="reviewrating" value="2" />
+    <input required onChange={handleChange} type="radio" id="star2" name="rating" value="2" />
     <label for="star2" title="text">2 stars</label>
-    <input onChange={handleChange} type="radio" id="star1" name="reviewrating" value="1" />
+    <input required onChange={handleChange} type="radio" id="star1" name="rating" value="1" />
     <label for="star1" title="text">1 star</label>
 
 </div>
@@ -98,4 +99,4 @@ const MakingReview=()=>{
   
 
 }
-export default MakingReview
+export default MakeEntertainmentReview

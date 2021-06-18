@@ -25,9 +25,10 @@ const Nav = (props) => {
   return (
   
     <nav style={{ width: '100%', position: 'fixed', background: '#8C92AC' }} className="navBar">
-      <h1 style={{ textAlign: 'center' }}>
-      <FontAwesomeIcon icon="sun"/>
-        The Paradise Collection </h1>
+      <h1 style={{ textAlign: 'center',marginLeft:'20px' }}>
+      <FontAwesomeIcon style={{marginRight:'5px'}} icon="sun"/>
+        The Paradise Collection
+        </h1>
         
      
       <hr></hr>
@@ -35,7 +36,7 @@ const Nav = (props) => {
   {navbarOpen ? (
     <MdClose  className="close" style={{ color: "black", width: "30px", height: "30px" }} />
     ) : (
-      <FiMenu style={{ color: "black", width: "40px", height: "40px",marginBottom:'20px' }} />
+      <FiMenu className="open"  />
       )}
        
 </button>      

@@ -24,6 +24,7 @@ const Hotels = ({val,onAdd}) => {
       <FontAwesomeIcon icon="hotel"/>
         Book
         </button>
+      
 
      
      

@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 
 
 export default function Paradise(props) {
-  const { val,onAdd } = props;
+  const { val, onAdd } = props;
+  
   
   let randomnum = Math.random() * 300
   let WholeNum = randomnum.toFixed(0)
@@ -26,14 +27,15 @@ export default function Paradise(props) {
         Embarkation Port: EWR
          </h2>
       <p>
-      <FontAwesomeIcon icon="fighter-jet"/>
-Plane: {ChosenPlanes}</p>
-      <p>
-      <p>
+     
       <FontAwesomeIcon icon="clock" />
         <meter value={WholeNum} min="0" max="300" />
       ETA: {WholeNum} Mintues: Plane Is Landing Soon!
-      </p>
+          </p>
+      <p>
+      <FontAwesomeIcon icon="fighter-jet"/>
+Plane: {ChosenPlanes}</p>
+      <p>
       <FontAwesomeIcon icon="plane-arrival"/>
         Arriving From: {RandomArrival}
       </p>
@@ -48,6 +50,11 @@ Plane: {ChosenPlanes}</p>
         <p>
         <FontAwesomeIcon icon="dollar-sign"/>
             {val.price}
+            <div>
+          <label>Dates: 
+              <input min="2021-06-17" type="date" />
+            </label>
+            </div>
             <Link   to={`/locations/${val.id}/hotels`}>
               <button className="reviewBTN" onClick={() => onAdd(val)}>
               <FontAwesomeIcon style={{marginRight:'5px'}}icon="shopping-cart"/>
@@ -69,11 +76,14 @@ Plane: {ChosenPlanes}</p>
 
   return (
   
-    <div style={{marginTop:'100px'}}>
+    <div style={{ marginTop: '100px' }}>
       <h2 >
       <FontAwesomeIcon icon="plane-departure"/>
         Embarkation Port: EWR
          </h2>
+         {/* <button style={{height:'35px',borderRadius:'10px',color:'white',backgroundColor:'blue'}}>
+        <FontAwesomeIcon icon="directions"/>
+          Directions</button> */}
       <p>
         <FontAwesomeIcon icon="clock" />
         
@@ -96,24 +106,29 @@ Plane: {ChosenPlanes}</p>
       </Link>
         <h3>      <FontAwesomeIcon icon="map-pin"/>
 {val.name}</h3>
-      
         <p>
         <FontAwesomeIcon icon="dollar-sign"/>
 
           {val.price}
+          <div>
+          <label>Fly Date: 
+              <input  min="2021-06-17" type="date" />
+            </label>
+            </div>
           <Link  style={{ color: 'black' }} to={`/locations/${val.id}/hotels`}>
-
             <button className="reviewBTN" onClick={() => onAdd(val)}>
-            <FontAwesomeIcon style={{marginRight:'5px'}}icon="shopping-cart"/>
-              Fly </button>
+
+              <FontAwesomeIcon style={{ marginRight: '5px' }} icon="shopping-cart" />         
+              Book </button>
           
-</Link>
+          </Link>
         </p>
       <p > Distance:{val.distance} Miles</p>
         
       </div>
       <hr></hr>
-     
+      
+
       </div>
     )
       

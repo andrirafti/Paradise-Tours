@@ -28,14 +28,16 @@ const Review = () => {
       <h1 style={{textAlign:'center'}}>Have you visited this resort?</h1>
       <p style={{textAlign:'center'}}>Please leave a review!</p>
       <Link to={`/locations/${location_id}/hotels/${hotel_id}/MakeReview`} ><button style={{ width: '100%' }} > Leave A Review</button></Link>
-      <h1>
+      <h1 style={{textAlign:'center'}}>
         Average Rating:
            <button className="badge">{AVG}</button> /5
         </h1>
-      <hr></hr>
-      {review.map((val) => (
       
-        <Reviews val={val}/>
+      <h1 style={{textAlign:'center'}}>Reviews</h1>
+      {review.map((val) => (
+    
+          <Reviews  val={val} />
+        
       ))}
     </div>
   )

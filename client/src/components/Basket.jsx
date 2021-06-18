@@ -2,7 +2,7 @@ import React, { useState,useRef,useEffect }from 'react'
 
 const Basket = (props) => {
   const [checkout, setCheckOut] = useState(false)
-  const { cartItems,setCartItems, onAdd, onRemove } = props
+  const { cartItems, onAdd, onRemove } = props
   //price is my API backend value for my stuff worth money//
   const itemsPrice = cartItems.reduce((a, b) => a + b.price * b.QTY,0)
   const taxPrice = itemsPrice * 0.14
@@ -53,7 +53,7 @@ const Basket = (props) => {
       {cartItems.map((val) => (
         <div key={val.id} className="row">
           <div className="col-2">{val.name} </div>
-          <div className="col2"><img style={{width:'50%'}} src={val.imgurl}/></div>
+          <div className="col2"><img  src={val.imgurl}/></div>
           <div className="col-2">
             <button onClick={() => onAdd(val)} className="add">+</button>
             <button onClick={()=>onRemove(val)} className="remove">-</button>
@@ -99,7 +99,7 @@ const Basket = (props) => {
               {checkout ? (
              <div ref={paypal}></div>
       ):(
-        <button  onClick = { ()=>{ setCheckOut(true) } }>Purchase</button>
+        <button className="BUYIT" onClick = { ()=>{ setCheckOut(true) } }>Purchase</button>
       )
             }
 

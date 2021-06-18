@@ -121,10 +121,45 @@ button .ReviewC{
 .block{
   background-color:lightslategray;
   padding:1rem;
-  margin: 0.5rem;
   border-radius: 0.5rem;
-  width:99%
+  width:100%;
+  text-align: center;
+ 
 }
+
+.row .BUYIT{
+  width: 100px;
+}
+.col2 img{
+  width: 50%;
+}
+
+@media all
+    and (max-width: 475px) 
+    and (min-width: 350px)
+{
+
+  .block{
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .row .BUYIT{
+    width: 100px;
+  }
+  .col2 img{
+    width: 40%;
+  }
+  .navBar{
+    width: 50%;
+  }
+  .row{
+   
+    width:fit-content
+  }
+}
+
 
 
 .reviews{
@@ -141,8 +176,60 @@ button .ReviewC{
 
 
 
+.theimg :hover{
+opacity: 1;
+}
 
+.entertainComments{
+  display: flex;
+  height: 100%;
+  text-align: center;
+}
+.CommentE{
+  margin-left: 120px;
+}
+.RatingE{
+  width: 20px;
+  margin-left: 80px;
+}
+.NameE{
+  width: 150px;
+}
+@media only screen 
+and (device-width:375px){
+  .entertainComments{
+    display: block;
+    text-align: center;
+  }
+  .CommentE{
+    margin-left: 0px;
+   
+  }
+  .RatingE{
+    width: 0;
+    margin-left: 40px;
+  }
+  .NameE{
+    width: 0px;
+  }
+}
 
+/* media for submiting reviews*/
+@media only screen 
+    and (device-width: 375px) 
+{
+  .block{
+  background-color:lightslategray;
+  padding:1rem;
+  border-radius: 0.5rem;
+  width:100%;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+}
 
 
 /* Below is for the star rating */

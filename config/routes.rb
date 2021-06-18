@@ -3,6 +3,12 @@ Rails.application.routes.draw do
     resources :hotels do 
       resources :ratings 
       resources :excursions
+      resources :entertainments do
+        resources :rating_entertainments
+      end
+      resources :suites do
+        resources :rating_suites
+      end
       
     end
   end

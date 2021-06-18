@@ -11,7 +11,7 @@ const Spa = () => {
     
     <div>
       <header>
-        <img style={{width:'100%', marginTop:"100px"}} src={SpaPic}/>
+        <img style={{width:'100%', marginTop:"0px"}} src={SpaPic}/>
       </header>
       <h1 style={{ textAlign: 'center' }}>The Beloved Spa</h1>
       <hr></hr>
