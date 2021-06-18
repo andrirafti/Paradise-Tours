@@ -48,12 +48,12 @@ const MakingReview=()=>{
         <div  className="reviews"style={{ "textAlign": "center" }}>
           <aside>
             {/* <label> Name: */}
-        <input style={{ marginRight: '0', marginLeft: '30%', display: 'block',marginTop:'20px' }} type="text" placeholder="Name" name="name" value={reviews.name} required onChange={handleChange} />
+        <input style={{ marginRight: '0', marginLeft: '30%', display: 'block',marginTop:'20px',width: "fit-content" }} type="text" placeholder="Name" name="name" value={reviews.name} required onChange={handleChange} />
             {/* </label> */}
           </aside>
           <aside style={{marginTop:'20px'}}>
             {/* <label> Comment: */}
-        <input style={{ marginRight: '0', marginLeft: '30%', display: 'block' }} type="text" placeholder="Review" name="review" value={reviews.review} required onChange={handleChange} />
+        <input style={{ marginRight: '0', marginLeft: '30%', display: 'block',width: "fit-content" }} type="text" placeholder="Review" name="review" value={reviews.review} required onChange={handleChange} />
             {/* </label> */}
           </aside>
         </div>
