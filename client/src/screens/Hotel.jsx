@@ -123,7 +123,7 @@ Loading  </div>
     <MdClose  className="close" style={{ color: "black", width: "30px", height: "30px" }} />
           ) : (
               
-      <FontAwesomeIcon style={{ color: 'black', marginTop: '20px', marginLeft: '20px', paddingRight: '0px', marginRight: '20px',fontSize:'15px' }} icon="search" />
+            <p>Sort: <FontAwesomeIcon style={{ fontSize:'17px'}} icon="search" /></p>
       )}
        
 </button>      
