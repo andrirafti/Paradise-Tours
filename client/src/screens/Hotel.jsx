@@ -122,8 +122,8 @@ Loading  </div>
   {navbarOpen ? (
     <MdClose  className="close" style={{ color: "black", width: "30px", height: "30px" }} />
           ) : (
-              <p>Sort:
-      <FontAwesomeIcon style={{ color: 'black', marginTop: '20px', marginLeft: '20px', paddingRight: '0px', marginRight: '20px' }} icon="search" /></p>
+              
+      <FontAwesomeIcon style={{ color: 'black', marginTop: '20px', marginLeft: '20px', paddingRight: '0px', marginRight: '20px',fontSize:'15px' }} icon="search" />
       )}
        
 </button>      
