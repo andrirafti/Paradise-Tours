@@ -37,7 +37,14 @@
   margin-top:5px
 }
 
-
+.menuNav{
+  width:100%
+}
+.menuNav .showMenu {
+  width: 100%;
+  background-color: whitesmoke;
+  bottom:95px
+}
 
     }
 
@@ -81,7 +88,7 @@
 .menuNav ul{
   margin-top: 20px;
 }
-.menuNav.showMenu {
+.menuNav .showMenu {
   width: 100%;
   background-color: whitesmoke;
   bottom:95px

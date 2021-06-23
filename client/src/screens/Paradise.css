@@ -37,6 +37,14 @@ header{
 h1,h2{
   font-size: 15px;
 }
+.menuNav{
+  width:100%
+}
+.menuNav .showMenu {
+  width: 100%;
+  background-color: whitesmoke;
+  bottom:95px
+}
 
     }
 
