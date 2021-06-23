@@ -47,7 +47,7 @@
   left: 0px;
   top: 0px;
   z-index: 10;
-  
+  bottom:92%;
   
   border: solid black 1px;
 }
@@ -69,7 +69,7 @@
   overflow-y: scroll;
   list-style: none;
   position: fixed;
-  top: 0;
+  top: 10;
   left: 0;
   bottom: 0;
   height: 100vh;
@@ -82,8 +82,9 @@
   margin-top: 20px;
 }
 .menuNav.showMenu {
-  width: 80%;
+  width: 100%;
   background-color: whitesmoke;
+  bottom:95px
 }
 
  a {
@@ -94,7 +95,7 @@
   width: auto;
     margin: 0 auto;
     font-weight: bold;
-    font-size:14px
+    
   
   
 } 

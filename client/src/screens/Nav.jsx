@@ -31,7 +31,7 @@ const Nav = (props) => {
         </h1>
         
      
-      <hr></hr>
+ 
       <button onClick={handleToggle}>
   {navbarOpen ? (
     <MdClose  className="close" style={{ color: "black", width: "30px", height: "30px" }} />
@@ -40,7 +40,7 @@ const Nav = (props) => {
       )}
        
 </button>      
-      <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`} ><Link onClick={() => closeMenu()} style={{ color: 'black', marginTop: '70px', marginLeft: '20px' }} to="/">
+      <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`} ><Link onClick={() => closeMenu()} style={{ color: 'black', marginTop: '60px', marginLeft: '20px' }} to="/">
         <FontAwesomeIcon style={{marginRight:'5px'}} icon="home"/>
         Home
         </Link>
