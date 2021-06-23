@@ -38,13 +38,17 @@
 }
 
 .menuNav{
-  width:100%
+  width:100%;
+
 }
 .menuNav .showMenu {
   width: 100%;
+  max-width:100px;
   background-color: whitesmoke;
+ 
   bottom:95px
 }
+
 
     }
 
@@ -80,9 +84,8 @@
   left: 0;
   bottom: 0;
   height: 100vh;
-  width: 0;
   overflow: hidden;
-  max-width: 290px;
+  max-width: 90px;
   z-index: 9;
 }
 .menuNav ul{
