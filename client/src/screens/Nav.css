@@ -59,7 +59,8 @@
   top: 0px;
   z-index: 10;
   bottom:92%;
-  
+
+  height:55px;
   border: solid black 1px;
 }
 
