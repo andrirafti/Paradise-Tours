@@ -37,7 +37,7 @@
   margin-top:5px
 }
 
-.menuNav{
+/* .menuNav{
   width:100%;
 
 }
@@ -47,7 +47,7 @@
   background-color: whitesmoke;
  
   bottom:95px
-}
+} */
 
 
     }
@@ -77,7 +77,7 @@
   
 }
 
-.menuNav {
+/* .menuNav {
   overflow-y: scroll;
   list-style: none;
   position: fixed;
@@ -88,15 +88,15 @@
   overflow: hidden;
   max-width: 90px;
   z-index: 9;
-}
-.menuNav ul{
+} */
+/* .menuNav ul{
   margin-top: 20px;
-}
-.menuNav .showMenu {
+} */
+/* .menuNav .showMenu {
   width: 100%;
   background-color: whitesmoke;
   bottom:95px
-}
+} */
 
  a {
   
